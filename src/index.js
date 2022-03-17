@@ -20,13 +20,24 @@ const studentList = (state = [], action) => {
     if(action.type === 'SET_STUDENT_LIST') {
         return action.payload;
     }
-
+    if(action.type === 'EDIT_ONCHANGE') {
+        return {
+            ...state, 
+            [action.payload.property]: action.payload.value
+        }
+    }
+    
     return state;
 }
 
 // hold only the single student object being edited
 const editStudent = (state  = {}, action) => {
-
+    if(action.type === 'SET_EDIT_STUDENT') {
+        return action.payload;
+    }
+    if (action.type === 'EDIT_CLEAR') {
+        return {github_name: ''};
+    }
     return state;
 }
 

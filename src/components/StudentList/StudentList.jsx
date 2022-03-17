@@ -1,4 +1,4 @@
-import { useSelector} from 'react-redux';
+import { useSelector } from 'react-redux';
 import './StudentList.css';
 import StudentDetail from '../StudentDetail/StudentDetail';
 
@@ -24,7 +24,7 @@ function StudentList(props) {
             </table>
         </div>
     );
-    
+
 }
 
 export default StudentList;
